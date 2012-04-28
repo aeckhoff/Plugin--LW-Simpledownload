@@ -1,0 +1,14 @@
+<div class="lw_simpledownload_before" id="lw_simple_download_before_<?php echo $this->objectID; ?>"></div>
+<div class="lw_simpledownload" id="lw_simple_download_<?php echo $this->objectID; ?>">
+<ul class="lw_simpledownload_list">
+<?php $i=0; foreach($this->entries as $entry): $i++; ?>
+
+	<li class="lw_simpledownload_listitem <?php echo $entry['filetype_styleclass']; ?>" id="lw_simpledownload_listitem_<?php echo $this->objectID.'_'.$i; ?>">
+		<a target="__top" class="lw_simpledownload_listitem_link" id="lw_simpledownload_listitem_link<?php echo $this->objectID.'_'.$i; ?>" href="<?php echo $entry['url']; ?>"><?php echo $entry['title']; ?></a> <span class="lw_simpledownload_listitem_filesize"><?php echo $entry['filesize_readable']; ?></span>
+	</li>
+
+<?php endforeach; ?>
+
+</ul>
+</div>
+<div class="lw_simpledownload_after" id="lw_simple_download_after_<?php echo $this->objectID; ?>"></div>
